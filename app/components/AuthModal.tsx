@@ -5,6 +5,8 @@ import Modal from './Modal';
 import { useUser } from './UserContext';
 import { useRouter } from 'next/navigation';
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 type AuthModalProps = {
   isOpen: boolean;
   onClose: () => void;

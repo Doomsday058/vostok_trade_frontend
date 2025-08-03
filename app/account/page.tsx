@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { useUser } from '../components/UserContext';
 import { FaUserCircle, FaEnvelope, FaBuilding, FaHistory, FaSpinner } from 'react-icons/fa';
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 type PriceRequest = {
   _id: string;
   requestDate: string;
@@ -33,7 +35,7 @@ export default function AccountPage() {
           throw new Error('Не найден токен авторизации');
         }
         
-        const response = await fetch('/api/price-requests', {
+        const response = await fetch(`${apiUrl}/api/price-requests`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         

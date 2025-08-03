@@ -5,6 +5,8 @@ import { useUser } from './UserContext';
 import BlueAuthModal from './AuthModal';
 import Modal from './Modal';
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 type Product = {
   _id: string;
   title: string;
@@ -36,10 +38,10 @@ export default function ProductDetailModal({ isOpen, onClose, product }: Product
     setSuccess(false);
     
     try {
-      const response = await fetch('/api/request-price', {
+      const response = await fetch(`${apiUrl}/api/request-price`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
       });
       

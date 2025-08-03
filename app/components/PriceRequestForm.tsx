@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useUser } from './UserContext';
 import BlueAuthModal from './AuthModal';
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 export default function PriceRequestForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -24,12 +26,12 @@ export default function PriceRequestForm() {
     setSuccess(false);
     
     try {
-      const response = await fetch('/api/request-price', {
+      const response = await fetch(`${apiUrl}/api/request-price`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
-      });
+    });
       
       if (!response.ok) {
         const errorData = await response.json();
