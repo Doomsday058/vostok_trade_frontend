@@ -10,6 +10,7 @@ type User = {
   email: string
   inn: string
   role: string
+  userType: 'personal' | 'business' // <-- ДОБАВЬ ЭТУ СТРОКУ
 }
 
 const UserContext = createContext<{
