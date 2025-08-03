@@ -58,11 +58,11 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
     setIsLoading(true);
     
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch(`${apiUrl}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(loginForm)
-      });
+    });
       
       const data = await response.json();
       
@@ -71,6 +71,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
       }
       
       login(data.token, data.user);
+      router.push('/');
       onClose();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Произошла ошибка');
@@ -93,8 +94,8 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
         companyName: userType === 'personal' ? '' : registerForm.companyName
       };
       
-      const response = await fetch('/api/register', {
-        method: 'POST',
+      const response = await fetch(`${apiUrl}/api/register`, {
+        method: 'POST',  
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)
       });

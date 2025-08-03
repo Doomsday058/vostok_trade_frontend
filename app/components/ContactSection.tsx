@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaTelegram, FaMapMarkerAlt, FaBuilding } from 'react-icons/fa';
 
 export default function ContactSection() {

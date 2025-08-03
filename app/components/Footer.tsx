@@ -1,5 +1,5 @@
 import { FaFacebook, FaInstagram, FaTelegram, FaWhatsapp, FaChevronRight, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-
+import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
@@ -10,9 +10,9 @@ export default function Footer() {
             {/* Колонка о компании */}
             <div>
               <div className="mb-6">
-                <a href="/" className="inline-block">
+                <Link href="/" className="inline-block">
                   <span className="text-2xl font-russo text-white">VOSTOK <span className="text-blue-500">TRADE</span></span>
-                </a>
+                </Link>
               </div>
               <p className="text-gray-400 mb-6 font-montserrat">
                 Ваш надежный партнер в оптовой торговле напитками. Мы предлагаем широкий ассортимент продукции высокого качества.
