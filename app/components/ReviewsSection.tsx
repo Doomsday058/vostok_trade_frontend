@@ -72,9 +72,9 @@ export default function ReviewsSection() {
     setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
   };
   
-  const goToIndex = (index) => {
-    setCurrentIndex(index);
-  };
+  const goToIndex = (index: number) => {
+  setCurrentIndex(index);
+};
   
   const visibleReviews = getVisibleReviews();
   
