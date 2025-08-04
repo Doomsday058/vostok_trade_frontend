@@ -12,8 +12,8 @@ _Современное Next.js приложение для оптовой пр�
 
 <p align="center">
     <img src="https://img.shields.io/badge/status-live-success?style=for-the-badge" alt="Статус">
-    <img src="https://img.shields.io/github/last-commit/Doomsday058/vostok-trade-frontend?style=for-the-badge" alt="Последний коммит">
-    <img src="https://img.shields.io/github/languages/top/Doomsday058/vostok-trade-frontend?style=for-the-badge" alt="Основной язык">
+    <img src="https://img.shields.io/github/last-commit/Doomsday058/vostok_trade_frontend?style=for-the-badge" alt="Последний коммит">
+    <img src="https://img.shields.io/github/languages/top/Doomsday058/vostok_trade_frontend?style=for-the-badge" alt="Основной язык">
 </p>
 
 ---
