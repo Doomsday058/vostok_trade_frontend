@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="./assets/screen.png" alt="Скриншот проекта Vostok Trade" width="800px"> 
+  </p>
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+# B2B Веб-сервис "VOSTOK TRADE COMPANY"
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+_Современное Next.js приложение для оптовой продажи напитков с личным кабинетом и автоматической отправкой прайс-листов._
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<p align="center">
+    <img src="https://img.shields.io/badge/status-live-success?style=for-the-badge" alt="Статус">
+    <img src="https://img.shields.io/github/last-commit/Doomsday058/vostok-trade-frontend?style=for-the-badge" alt="Последний коммит">
+    <img src="https://img.shields.io/github/languages/top/Doomsday058/vostok-trade-frontend?style=for-the-badge" alt="Основной язык">
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### ➡️ **[Посмотреть живое демо (Live Demo)](https://vostok-trade-frontend.vercel.app/)**
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🏛️ Архитектура проекта
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Этот проект является full-stack системой, состоящей из двух независимых, развернутых в облаке сервисов:
 
-## Deploy on Vercel
+| Сервис | Описание | Репозиторий |
+| :--- | :--- | :--- |
+| 🎨 **Frontend (Next.js)** | Клиентская часть, которую вы видите. | _(текущий)_ |
+| ⚙️ **Backend (Node.js)** | Основной API для работы с пользователями, товарами и базой данных MongoDB. | **[Перейти](https://github.com/Doomsday058/vostok-trade-backend)** |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🚀 Основные возможности
+
+| Функция | Описание |
+| :--- | :--- |
+| **🔐 Аутентификация** | Регистрация и вход для юридических и физических лиц с использованием JWT. |
+| **📋 Каталог продукции** | Динамическая загрузка и отображение каталога товаров из базы данных. |
+| **📧 Автоматическая отправка прайса** | Пользователи могут запросить актуальный прайс-лист, который автоматически генерируется и отправляется на их email. |
+| **👤 Личный кабинет** | Просмотр данных профиля и истории запросов прайс-листов. |
+| **📱 Адаптивный дизайн** | Корректное отображение на всех устройствах благодаря Tailwind CSS. |
+
+---
+
+### 🛠️ Технологический стек
+
+<p>
+    <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+</p>
+
+---
+
+<details>
+<summary>▶️ 📦  <strong>Инструкции по установке и запуску</strong></summary>
+
+<br>
+
+1.  **Клонируйте репозиторий:**
+    ```bash
+    git clone [https://github.com/Doomsday058/vostok-trade-frontend.git](https://github.com/Doomsday058/vostok-trade-frontend.git)
+    cd vostok-trade-frontend
+    ```
+
+2.  **Установите зависимости:**
+    ```bash
+    npm install
+    ```
+
+3.  **Создайте файл `.env.local`** в корне проекта и добавьте переменную для подключения к бэкенду:
+    ```
+    NEXT_PUBLIC_API_URL=http://localhost:8000
+    ```
+
+4.  **Запустите приложение для локальной разработки:**
+    ```bash
+    npm run dev
+    ```
+
+</details>
